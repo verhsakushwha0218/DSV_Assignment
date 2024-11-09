@@ -1,0 +1,21 @@
+# Import necessary libraries
+from sklearn.datasets import load_iris
+import pandas as pd
+
+# Load the Iris dataset
+iris = load_iris()
+
+# Convert it to a DataFrame for easier manipulation and exploration
+iris_df = pd.DataFrame(data=iris.data, columns=iris.feature_names)
+
+# Display the first five rows of the dataset
+print("First five rows of the dataset:")
+print(iris_df.head())
+
+# Display the shape of the dataset
+print("\nShape of the dataset:")
+print(iris_df.shape)
+
+# Display summary statistics: mean, standard deviation, min, and max values for each feature
+print("\nSummary statistics:")
+print(iris_df.describe())
